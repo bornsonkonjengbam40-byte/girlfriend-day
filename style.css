@@ -30,7 +30,7 @@ body::before{
 
     background:
     linear-gradient(rgba(255,150,180,.25),rgba(255,170,190,.25)),
-    url("images/girlfriend.jpeg");
+    url("images/gf picture.jpeg")
 
     background-size:cover;
     background-position:center;
