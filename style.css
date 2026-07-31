@@ -42,12 +42,16 @@ body::before{
     z-index:-3;
 }
 
-body::after{
-    content:"";
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.20);
-    z-index:-2;
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    overflow-y:auto;
+    overflow-x:hidden;
+    background:#111;
+    position:relative;
+    padding:30px 0;
 }
 
 /* ================= FLOATING HEARTS ================= */
@@ -88,7 +92,8 @@ body::after{
 /* ================= ENVELOPE ================= */
 
 .container{
-    position:absolute;
+    position:fixed;
+    inset:0;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -168,7 +173,7 @@ body::after{
 
     background:rgba(255,255,255,.14);
 
-    backdrop-filter:25px;
+    backdrop-filter:blur(25px);
     -webkit-backdrop-filter:blur(25px);
 
     border:1px solid rgba(255,255,255,.25);
@@ -181,9 +186,9 @@ body::after{
 
     animation:fade .8s;
 
-    box-shadow:
-    0 25px 50px rgba(0,0,0,.35);
+    box-shadow:0 25px 50px rgba(0,0,0,.35);
 
+    margin:40px auto;
 }
 
 /* ================= PHOTO ================= */
