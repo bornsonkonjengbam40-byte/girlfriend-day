@@ -1,21 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>For You ❤️</title>
 
     <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
 
@@ -25,7 +17,7 @@
     <div id="hearts"></div>
 
     <!-- Envelope -->
-    <div id="envelopeSection">
+    <div class="container" id="envelopeSection">
 
         <div class="envelope" id="envelope">
 
@@ -48,45 +40,51 @@
     <!-- Love Card -->
     <div class="card hidden" id="card">
 
+        <!-- Profile -->
         <div class="profile">
 
             <div class="photo-frame">
 
-                <img src="images/girlfriend.jpeg" class="profile-photo">
+                <img src="images/girlfriend.jpeg"
+                     alt="My Love"
+                     class="profile-photo">
 
             </div>
 
         </div>
 
-        <h1>
-            ❤️ Happy Girlfriend's Day ❤️
-        </h1>
+        <!-- Content -->
+        <div class="message-content">
 
-        <h2 class="name">
-            To My Beautiful Girl ❤️
-        </h2>
+            <h1>❤️ Happy Girlfriend's Day ❤️</h1>
 
-        <p class="nickname">
-            Abemma ❤️
-        </p>
+            <h2 class="name">
+                To My Beautiful Girl ❤️
+            </h2>
 
-        <div class="divider">
+            <p class="nickname">
+                Abemma ❤️
+            </p>
 
-            <span>❤️</span>
+            <div class="divider">
 
-            <div class="line"></div>
+                <span>❤️</span>
 
-            ❀
+                <div class="line"></div>
 
-            <div class="line"></div>
+                <span>❀</span>
 
-            <span>❤️</span>
+                <div class="line"></div>
 
-        </div>
+                <span>❤️</span>
 
-        <div class="message">
+            </div>
 
-            <p id="typing"></p>
+            <div class="letter-text">
+
+                <p id="typing"></p>
+
+            </div>
 
         </div>
 
@@ -95,5 +93,4 @@
     <script src="script.js"></script>
 
 </body>
-
 </html>
