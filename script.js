@@ -8,35 +8,37 @@ const hearts = document.getElementById("hearts");
 
 // ================= LETTER =================
 
-const letter = `Dear Abemma ❤️,
+const message = `Dear Abemma ❤️,
 
 Happy Girlfriend's Day.
 
 Every day with you feels like a beautiful dream come true.
 
 You are my happiness,
-my strength,
-and the most precious part of my life.
+my peace,
+and the most beautiful part of my life.
 
-Thank you for loving me,
-supporting me,
-and always making me smile.
+Thank you for always being by my side,
+for believing in me,
+and for making even the ordinary days feel special.
 
-No matter what happens in life,
-I promise to always cherish every moment with you.
+Whenever I smile,
+there's always a little reason connected to you.
 
-Thank you for being the most beautiful chapter of my life.
+I may not always find the perfect words,
+but I hope you always know how deeply I love you.
 
-I hope this little surprise reminds you
-how deeply you are loved.
+Thank you for being my best friend,
+my favorite person,
+and the love of my life.
 
-Happy Girlfriend's Day once again. ❤️
+Happy Girlfriend's Day, My Love.
 
-Forever Yours,
+Forever Yours ❤️
 
-❤️ Dada ❤️`;
+Bornson ❤️`;
 
-// ================= ENVELOPE OPEN =================
+// ================= OPEN ENVELOPE =================
 
 envelope.addEventListener("click", () => {
 
@@ -46,7 +48,7 @@ envelope.addEventListener("click", () => {
 
         envelopeSection.style.opacity = "0";
 
-    }, 1000);
+    }, 900);
 
     setTimeout(() => {
 
@@ -54,29 +56,29 @@ envelope.addEventListener("click", () => {
 
         card.classList.remove("hidden");
 
-        typeLetter();
+        typeWriter();
 
-    }, 1800);
+    }, 1700);
 
 });
 
 // ================= TYPEWRITER =================
 
-function typeLetter() {
-
-    typing.innerHTML = "";
+function typeWriter(){
 
     let i = 0;
 
-    function type() {
+    typing.innerHTML = "";
 
-        if (i < letter.length) {
+    function type(){
 
-            typing.innerHTML += letter.charAt(i);
+        if(i < message.length){
+
+            typing.innerHTML += message.charAt(i);
 
             i++;
 
-            setTimeout(type, 35);
+            setTimeout(type,30);
 
         }
 
@@ -88,40 +90,41 @@ function typeLetter() {
 
 // ================= FLOATING HEARTS =================
 
-const heartList = [
+const emojis = [
     "❤️",
-    "💖",
     "💕",
+    "💖",
     "💗",
     "💓",
     "💞"
 ];
 
-function createHeart() {
+function createHeart(){
 
     const heart = document.createElement("div");
 
-    heart.className = "heart-float";
+    heart.className = "heart";
 
     heart.innerHTML =
-        heartList[Math.floor(Math.random() * heartList.length)];
+        emojis[Math.floor(Math.random()*emojis.length)];
 
-    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.left =
+        Math.random()*100 + "vw";
 
     heart.style.fontSize =
-        (18 + Math.random() * 18) + "px";
+        (16 + Math.random()*20) + "px";
 
     heart.style.animationDuration =
-        (5 + Math.random() * 5) + "s";
+        (5 + Math.random()*5) + "s";
 
     hearts.appendChild(heart);
 
-    setTimeout(() => {
+    setTimeout(()=>{
 
         heart.remove();
 
-    }, 10000);
+    },10000);
 
 }
 
-setInterval(createHeart, 450);
+setInterval(createHeart,350);
